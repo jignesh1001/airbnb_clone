@@ -4,6 +4,7 @@ import IndexPage from "./pages/indexPage";
 import LoginPage from "./pages/LoginPage";
 import Layout from "./Layout";
 import RegisterPage from "./pages/RegisterPage";
+import Accountpage from "./pages/AccountPage";
 import axios from "axios";
 import { UserContextProvider } from "./UserContext";
 
@@ -17,6 +18,8 @@ function App() {
         <Route index element={<IndexPage/>} />
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/register" element={<RegisterPage/>} />
+        <Route path="/account/:subpage?" element={<Accountpage/>} />
+        
         
       </Route>
     </Routes>

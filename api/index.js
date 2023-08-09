@@ -17,7 +17,7 @@ app.use(cors({
     credentials : true,
     origin : 'http://localhost:5173',
 }))
-// console.log(process.env.MONGO_URL)
+
  mongoose.connect(process.env.MONGO_URL)
  console.log("mongdb is connected");
 app.get('/test',(req,res) =>{
@@ -66,7 +66,7 @@ app.post('/login' ,async (req,res)=>{
     if(token){
         jwt.verify(token,jwtSecret,{},async(err,userData)=>{
             if(err)throw err;
-            const {name,email,_id} =  await User.findById(userData.id)
+            const {name,email,_id} =  await User.findById(userData.id) 
 
             res.json({name,email,_id})
         })
