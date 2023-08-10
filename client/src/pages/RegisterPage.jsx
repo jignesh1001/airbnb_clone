@@ -15,8 +15,7 @@ export default function RegisterPage(){
         });
         alert('Registration successful now you can login')
           
-        setRedirect(true)
-        console.log(redirect)
+        setRedirect(true)    
     }
         catch(e){
             alert('Registration unsuccessful try again')
