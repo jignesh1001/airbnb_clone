@@ -98,7 +98,7 @@ export default function Accountpage() {
         <div className="text-center max-w-lg mx-auto ">
           Logged in as {user.name} ({user.email})<br />
           <button onClick={logout} className="primary max-w-sm mt-2">
-            LogOut
+            Logout
           </button>
         </div>
       )}
